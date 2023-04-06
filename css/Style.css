@@ -1,0 +1,131 @@
+@charset "UTF-8";
+@font-face { /*font-face ingresas una fuente nueva*/
+  font-family: "LetraNueva";
+  src: url(../assets/Fonts/Invologium-Regular.ttf);
+}
+/* body */
+body {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.logoIndex {
+  width: 3em;
+}
+
+/* HEADER */
+header {
+  background-color: #23282e;
+  color: #ffffff;
+}
+header form {
+  background-color: #bbc2cc;
+}
+
+.logoPie {
+  width: 1em;
+}
+
+/* MAIN */
+main {
+  background-color: #ffffff;
+  color: #23282e;
+}
+main a {
+  text-decoration: none; /* le quita la propiedad fuente a los enlaces*/
+  color: #23282e;
+}
+
+.mainTituloH1, .mainTituloH2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+  text-transform: uppercase;
+  min-height: 75px;
+}
+
+.main__productos-destacados img, .main__novedades img, .main__nuevos-productos img {
+  height: 300px;
+  width: 300px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* FOOTHER */
+footer {
+  background-color: #bbc2cc;
+  color: #23282e;
+}
+footer a {
+  text-decoration: none; /* le quita la propiedad fuente a los enlaces*/
+  color: #23282e;
+}
+footer ul, footer ul {
+  list-style-type: none;
+}
+
+.bannerInferiorPF, .bannerInferiorEnvios {
+  display: none;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(auto);
+  gap:   2rem;
+  justify-items: center;
+}
+
+.main__novedades, .main__productos-destacados, .main__nuevos-productos {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(auto);
+  gap:   2rem;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.indexProductos {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(auto);
+  gap:   1em;
+  align-content: center;
+}
+
+.footer__extra {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(auto);
+  gap:   0;
+}
+
+@media screen and (min-width: 768px) {
+  .indexProductos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-content: center;
+  }
+  .footer__extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 992px) {
+  .indexProductos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1em;
+    align-content: center;
+  }
+  .footer__extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}/*# sourceMappingURL=style.css.map */

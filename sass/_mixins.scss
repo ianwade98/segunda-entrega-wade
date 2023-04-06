@@ -1,0 +1,12 @@
+@mixin grid($columnas, $espacio) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    grid-template-rows: (repeat(auto));
+    gap: $espacio;
+}
+
+@mixin altoAncho ($height, $width) {
+    height:$height;
+    width:$width;
+    
+}

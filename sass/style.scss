@@ -1,0 +1,161 @@
+@import "vars";
+@import "_mixins";
+
+
+@font-face { /*font-face ingresas una fuente nueva*/
+  font-family: "LetraNueva" ;
+  src: url(../assets/Fonts/Invologium-Regular.ttf);
+}
+
+
+/* body */
+body{
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+
+.logoIndex{
+  width: 3em;
+}
+
+/* HEADER */
+
+header{
+background-color:$colorSecundario;
+color: $colorPrincipal;
+  form{
+  background-color:$colorTerciario;
+  }
+}
+
+
+.logoPie{
+width: 1em;
+}
+
+
+
+/* MAIN */
+main {
+background-color: $colorPrincipal;
+color: $colorSecundario;
+  a { 
+  text-decoration: none; /* le quita la propiedad fuente a los enlaces*/ 
+  color: $colorSecundario;
+  }
+}
+
+
+
+.mainTituloH1 {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-size: x-large;
+text-transform: uppercase;
+min-height: 75px;
+}
+
+.mainTituloH2{
+  @extend .mainTituloH1;
+}
+
+.main__productos-destacados img, .main__novedades img, .main__nuevos-productos img {
+@include altoAncho(300px, 300px);
+}
+
+ul {
+list-style-type: none;
+}
+
+
+
+
+/* FOOTHER */
+footer{
+background-color:$colorTerciario;
+color: $colorSecundario;
+a { 
+  text-decoration: none; /* le quita la propiedad fuente a los enlaces*/ 
+  color: $colorSecundario;
+  }
+ul, ul {
+    list-style-type: none;
+}
+}
+
+
+.bannerInferiorPF , .bannerInferiorEnvios{
+display: none;
+}
+
+
+main{
+  @include grid(1, 2rem);
+justify-items: center;
+}
+
+.main__novedades, .main__productos-destacados, .main__nuevos-productos{
+@include grid(1, 2rem);
+justify-content: space-around;
+align-content: center;
+}
+
+
+.indexProductos{
+@include grid(1, 1em);
+align-content: center;
+
+}
+
+
+
+.footer__extra{
+@include grid(2, 0);
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+
+.indexProductos{
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  align-content: center;
+  
+}
+
+.footer__extra{
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+}
+
+
+@media screen and (min-width: 992px) {
+
+.indexProductos{
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1em;
+  align-content: center;
+  
+}
+
+.footer__extra{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}}
